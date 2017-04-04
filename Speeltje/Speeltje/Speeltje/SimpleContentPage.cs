@@ -25,6 +25,7 @@ namespace Speeltje
       {
         var sentence = Zingeving.Zingeving.Generate();
         label1.Text = sentence;
+        DependencyService.Get<ITextToSpeech>().Speak(sentence);
       };
 
       Content = new StackLayout
